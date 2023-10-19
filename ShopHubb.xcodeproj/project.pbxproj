@@ -15,6 +15,7 @@
 		9F057DCB2AE160AD00DB0805 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DCA2AE160AD00DB0805 /* RegistrationView.swift */; };
 		9F057DCD2AE160BF00DB0805 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DCC2AE160BF00DB0805 /* ResetPasswordView.swift */; };
 		9F057DCF2AE1617800DB0805 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DCE2AE1617800DB0805 /* InputView.swift */; };
+		9F057DD12AE16D9200DB0805 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DD02AE16D9200DB0805 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		9F057DCA2AE160AD00DB0805 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		9F057DCC2AE160BF00DB0805 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		9F057DCE2AE1617800DB0805 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		9F057DD02AE16D9200DB0805 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 		9F057DC72AE15C1700DB0805 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9F057DD02AE16D9200DB0805 /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F057DC92AE1609300DB0805 /* UserLoginView.swift in Sources */,
+				9F057DD12AE16D9200DB0805 /* HomeView.swift in Sources */,
 				9F057DB22AE1422600DB0805 /* OnBoardingView.swift in Sources */,
 				9F057DCD2AE160BF00DB0805 /* ResetPasswordView.swift in Sources */,
 				9F057DCF2AE1617800DB0805 /* InputView.swift in Sources */,
