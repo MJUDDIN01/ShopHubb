@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		9F057DB02AE1422600DB0805 /* ShopHubbApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DAF2AE1422600DB0805 /* ShopHubbApp.swift */; };
-		9F057DB22AE1422600DB0805 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DB12AE1422600DB0805 /* ContentView.swift */; };
+		9F057DB22AE1422600DB0805 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DB12AE1422600DB0805 /* OnBoardingView.swift */; };
 		9F057DB42AE1422800DB0805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F057DB32AE1422800DB0805 /* Assets.xcassets */; };
 		9F057DB72AE1422800DB0805 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F057DB62AE1422800DB0805 /* Preview Assets.xcassets */; };
+		9F057DC92AE1609300DB0805 /* UserLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DC82AE1609300DB0805 /* UserLoginView.swift */; };
+		9F057DCB2AE160AD00DB0805 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DCA2AE160AD00DB0805 /* RegistrationView.swift */; };
+		9F057DCD2AE160BF00DB0805 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DCC2AE160BF00DB0805 /* ResetPasswordView.swift */; };
+		9F057DCF2AE1617800DB0805 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DCE2AE1617800DB0805 /* InputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9F057DAC2AE1422600DB0805 /* ShopHubb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopHubb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F057DAF2AE1422600DB0805 /* ShopHubbApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopHubbApp.swift; sourceTree = "<group>"; };
-		9F057DB12AE1422600DB0805 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9F057DB12AE1422600DB0805 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		9F057DB32AE1422800DB0805 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F057DB62AE1422800DB0805 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9F057DC82AE1609300DB0805 /* UserLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginView.swift; sourceTree = "<group>"; };
+		9F057DCA2AE160AD00DB0805 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		9F057DCC2AE160BF00DB0805 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		9F057DCE2AE1617800DB0805 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,12 @@
 		9F057DAE2AE1422600DB0805 /* ShopHubb */ = {
 			isa = PBXGroup;
 			children = (
-				9F057DAF2AE1422600DB0805 /* ShopHubbApp.swift */,
-				9F057DB12AE1422600DB0805 /* ContentView.swift */,
+				9F057DBF2AE1596C00DB0805 /* ShopHubbApp */,
+				9F057DBD2AE158FE00DB0805 /* View */,
+				9F057DBE2AE1593A00DB0805 /* ViewModel */,
+				9F057DC22AE159C200DB0805 /* Model */,
+				9F057DC12AE159A500DB0805 /* Networking */,
+				9F057DC02AE1598C00DB0805 /* Utility */,
 				9F057DB32AE1422800DB0805 /* Assets.xcassets */,
 				9F057DB52AE1422800DB0805 /* Preview Content */,
 			);
@@ -65,6 +77,94 @@
 				9F057DB62AE1422800DB0805 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9F057DBD2AE158FE00DB0805 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F057DC72AE15C1700DB0805 /* Home */,
+				9F057DC62AE15BDD00DB0805 /* Search */,
+				9F057DC52AE15BBF00DB0805 /* Favourites */,
+				9F057DC42AE15BAB00DB0805 /* Login */,
+				9F057DC32AE15B8E00DB0805 /* OnBoarding */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F057DBE2AE1593A00DB0805 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9F057DBF2AE1596C00DB0805 /* ShopHubbApp */ = {
+			isa = PBXGroup;
+			children = (
+				9F057DAF2AE1422600DB0805 /* ShopHubbApp.swift */,
+			);
+			path = ShopHubbApp;
+			sourceTree = "<group>";
+		};
+		9F057DC02AE1598C00DB0805 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		9F057DC12AE159A500DB0805 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9F057DC22AE159C200DB0805 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9F057DC32AE15B8E00DB0805 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				9F057DB12AE1422600DB0805 /* OnBoardingView.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		9F057DC42AE15BAB00DB0805 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9F057DC82AE1609300DB0805 /* UserLoginView.swift */,
+				9F057DCA2AE160AD00DB0805 /* RegistrationView.swift */,
+				9F057DCC2AE160BF00DB0805 /* ResetPasswordView.swift */,
+				9F057DCE2AE1617800DB0805 /* InputView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		9F057DC52AE15BBF00DB0805 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		9F057DC62AE15BDD00DB0805 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		9F057DC72AE15C1700DB0805 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +237,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F057DB22AE1422600DB0805 /* ContentView.swift in Sources */,
+				9F057DC92AE1609300DB0805 /* UserLoginView.swift in Sources */,
+				9F057DB22AE1422600DB0805 /* OnBoardingView.swift in Sources */,
+				9F057DCD2AE160BF00DB0805 /* ResetPasswordView.swift in Sources */,
+				9F057DCF2AE1617800DB0805 /* InputView.swift in Sources */,
 				9F057DB02AE1422600DB0805 /* ShopHubbApp.swift in Sources */,
+				9F057DCB2AE160AD00DB0805 /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
