@@ -19,7 +19,7 @@ struct HomeView: View {
                 }
                 .tag(0)
             
-            FavouriteView()
+            FavoriteView()
                 .tabItem {
                     Image(systemName: "heart")
                     Text("Favourite")
@@ -40,34 +40,6 @@ struct HomeView: View {
                 }
                 .tag(3)
         }
-    }
-}
-
-struct HomeTabView: View {
-    var body: some View {
-        Text("Home")
-            .font(.largeTitle)
-    }
-}
-
-struct FavouriteView: View {
-    var body: some View {
-        Text("Favourite")
-            .font(.largeTitle)
-    }
-}
-
-struct SearchView: View {
-    var body: some View {
-        Text("Search")
-            .font(.largeTitle)
-    }
-}
-
-struct ProfileView: View {
-    var body: some View {
-        Text("Profile")
-            .font(.largeTitle)
     }
 }
 

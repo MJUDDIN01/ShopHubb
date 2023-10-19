@@ -17,6 +17,10 @@
 		9F057DCF2AE1617800DB0805 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DCE2AE1617800DB0805 /* InputView.swift */; };
 		9F057DD12AE16D9200DB0805 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DD02AE16D9200DB0805 /* HomeView.swift */; };
 		9F057DD32AE1816E00DB0805 /* LoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DD22AE1816E00DB0805 /* LoggedInView.swift */; };
+		9F057DD52AE188EA00DB0805 /* HometabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DD42AE188EA00DB0805 /* HometabView.swift */; };
+		9F057DD72AE188FC00DB0805 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DD62AE188FC00DB0805 /* ProfileView.swift */; };
+		9F057DD92AE1891100DB0805 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DD82AE1891100DB0805 /* FavoriteView.swift */; };
+		9F057DDB2AE1891E00DB0805 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DDA2AE1891E00DB0805 /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		9F057DCE2AE1617800DB0805 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		9F057DD02AE16D9200DB0805 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9F057DD22AE1816E00DB0805 /* LoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInView.swift; sourceTree = "<group>"; };
+		9F057DD42AE188EA00DB0805 /* HometabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HometabView.swift; sourceTree = "<group>"; };
+		9F057DD62AE188FC00DB0805 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		9F057DD82AE1891100DB0805 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		9F057DDA2AE1891E00DB0805 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +177,10 @@
 			isa = PBXGroup;
 			children = (
 				9F057DD02AE16D9200DB0805 /* HomeView.swift */,
+				9F057DD42AE188EA00DB0805 /* HometabView.swift */,
+				9F057DD62AE188FC00DB0805 /* ProfileView.swift */,
+				9F057DD82AE1891100DB0805 /* FavoriteView.swift */,
+				9F057DDA2AE1891E00DB0805 /* SearchView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -245,9 +257,13 @@
 			files = (
 				9F057DC92AE1609300DB0805 /* UserLoginView.swift in Sources */,
 				9F057DD32AE1816E00DB0805 /* LoggedInView.swift in Sources */,
+				9F057DD72AE188FC00DB0805 /* ProfileView.swift in Sources */,
 				9F057DD12AE16D9200DB0805 /* HomeView.swift in Sources */,
+				9F057DDB2AE1891E00DB0805 /* SearchView.swift in Sources */,
 				9F057DB22AE1422600DB0805 /* OnBoardingView.swift in Sources */,
+				9F057DD92AE1891100DB0805 /* FavoriteView.swift in Sources */,
 				9F057DCD2AE160BF00DB0805 /* ResetPasswordView.swift in Sources */,
+				9F057DD52AE188EA00DB0805 /* HometabView.swift in Sources */,
 				9F057DCF2AE1617800DB0805 /* InputView.swift in Sources */,
 				9F057DB02AE1422600DB0805 /* ShopHubbApp.swift in Sources */,
 				9F057DCB2AE160AD00DB0805 /* RegistrationView.swift in Sources */,
