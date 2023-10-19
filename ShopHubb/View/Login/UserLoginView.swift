@@ -38,8 +38,8 @@ struct UserLoginView: View {
             }
             
             // Mark: Sign In button
-            Button {
-                // Add action
+            NavigationLink {
+                LoggedInView()
             } label: {
                 Text("Sign In")
                     .padding()

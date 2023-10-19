@@ -24,8 +24,8 @@ struct OnBoardingView: View {
                         .bold()
                         .font(.largeTitle)
                     Text("The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout.")
-                        .padding()
                 }
+                .padding()
                 HStack {
                     Rectangle()
                         .frame(width: 24, height: 8)
@@ -54,7 +54,7 @@ struct OnBoardingView: View {
                 }
             }
             .padding()
-            
         }
+        .navigationTitle("ShopHubb")
     }
 }
