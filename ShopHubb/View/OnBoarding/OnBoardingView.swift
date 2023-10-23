@@ -20,12 +20,10 @@ struct OnBoardingView: View {
                             .padding()
                     }
                 }
-                VStack {
                     GeometryReader { geometryReader in
                         OnboardingPageView(page: onBoardingPages[currentPage])
                             .frame(width: geometryReader.size.width)
                     }
-                }
                 .animation(.easeInOut, value: currentPage)
                 .onReceive(timer) { _ in
                     currentPage = (currentPage + 1) % onBoardingPages.count
