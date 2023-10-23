@@ -20,10 +20,15 @@ struct OnBoardingView: View {
                             .padding()
                     }
                 }
-                    GeometryReader { geometryReader in
-                        OnboardingPageView(page: onBoardingPages[currentPage])
-                            .frame(width: geometryReader.size.width)
+                TabView(selection: $currentPage) {
+                    ForEach(0..<onBoardingPages.count, id:\.self) { page in
+                        OnboardingPageView(page: onBoardingPages[page])
+                            .tag(page)
+                            .padding(.bottom, 25)
                     }
+                }
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+                .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
                 .animation(.easeInOut, value: currentPage)
                 .onReceive(timer) { _ in
                     currentPage = (currentPage + 1) % onBoardingPages.count
