@@ -1,15 +1,9 @@
-//
-//  ProfileView.swift
-//  ShopHubb
-//
-//  Created by Jasim Uddin on 19/10/2023.
-//
 
 import SwiftUI
 
-struct ProfileView: View {
+struct BasketView: View {
     var body: some View {
-        Text("Profile")
+        Text("Cart")
             .font(.largeTitle)
     }
 }

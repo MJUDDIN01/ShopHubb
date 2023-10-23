@@ -1,48 +1,55 @@
+
 import SwiftUI
 
-struct OnBoardingView: View {
+struct OnboardingPage: View {
+    var imageName: String
+    var title: String
+    var description: String
+    var rectangleColor: Color = .clear
     var body: some View {
         NavigationStack {
             VStack {
                 HStack {
                     Spacer()
-                    NavigationLink(destination: HomeView()) {
-                        Text("Skip Sign In")
+                    NavigationLink {
+                        HomeView()
+                    } label: {
+                        Text("Skip SignIn")
                             .bold()
+                            .padding()
                     }
                 }
                 GeometryReader { geometryReader in
-                    Image("Explore_Products")
+                    Image(imageName)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: geometryReader.size.width - 32)
                         .foregroundColor(.accentColor)
                 }
-                
                 Group {
-                    Text("Explore Products")
+                    Text(title)
                         .bold()
                         .font(.largeTitle)
-                    Text("The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout.")
+                    Text(description)
                 }
                 .padding()
                 HStack {
                     Rectangle()
                         .frame(width: 24, height: 8)
-                        .foregroundColor(.gray)
+                        .foregroundColor(rectangleColor)
                         .border(.black)
                     Rectangle()
                         .frame(width: 24, height: 8)
-                        .foregroundColor(.clear)
+                        .foregroundColor(rectangleColor)
                         .border(.black)
                     Rectangle()
                         .frame(width: 24, height: 8)
-                        .foregroundColor(.clear)
+                        .foregroundColor(rectangleColor)
                         .border(.black)
                 }
                 .padding()
                 Spacer()
-                // Mark: Navigate to sign In page
+                // Mark: Navigate To Sign In Page
                 NavigationLink {
                     UserLoginView()
                 } label: {
@@ -53,6 +60,7 @@ struct OnBoardingView: View {
                     }
                 }
             }
+            .padding()
         }
         .navigationTitle("ShopHubb")
     }

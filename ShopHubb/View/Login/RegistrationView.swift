@@ -1,9 +1,3 @@
-//
-//  RegistrationView.swift
-//  ShopHubb
-//
-//  Created by Jasim Uddin on 19/10/2023.
-//
 
 import SwiftUI
 
@@ -14,7 +8,7 @@ struct RegistrationView: View {
     @State private var confirmPassword = ""
     @Environment(\.dismiss) var dismiss
     var body: some View {
-        // Form field
+        // Mark: Form field
         VStack(spacing: 15) {
             InputView(text: $fullName,
                       title: "Full Name",
@@ -31,7 +25,7 @@ struct RegistrationView: View {
                       title: "Confirm Password",
                       placeHolder: "Enter password again",
                       isSecureField: true)
-            // Sign Up button
+            // Mark: Sign Up button
             Button {
             } label: {
                 Text("Sign Up")
@@ -40,9 +34,9 @@ struct RegistrationView: View {
                     .frame(width: UIScreen.main.bounds.width-30, height: 50)
                     .background(Color.blue)
                     .cornerRadius(25)
-
+                
             }
-            // Navigate to sign In page
+            // Mark: Navigate to sign In page
             Button {
                 dismiss()
             } label: {
@@ -50,9 +44,8 @@ struct RegistrationView: View {
                     Text("Already have account?")
                     Text("Sign In")
                         .bold()
+                }
             }
-            }
-
         }
         .navigationBarBackButtonHidden(true)
         .padding()

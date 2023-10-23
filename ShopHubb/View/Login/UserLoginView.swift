@@ -1,9 +1,3 @@
-//
-//  UserLoginView.swift
-//  ShopHubb
-//
-//  Created by Jasim Uddin on 19/10/2023.
-//
 
 import SwiftUI
 
@@ -12,7 +6,7 @@ struct UserLoginView: View {
     @State private var password = ""
     var body: some View {
         NavigationStack {
-            // Form field
+            // Mark: Form field
             VStack(spacing: 15) {
                 // Mark: Use the InputView
                 InputView(text: $email,
@@ -26,7 +20,7 @@ struct UserLoginView: View {
             }
             .padding()
             // Password reset
-            NavigationLink() {
+            NavigationLink {
                 // Mark: Navigate to password reset page
                 ResetPasswordView()
             } label: {
@@ -34,7 +28,7 @@ struct UserLoginView: View {
                     Text("Forgot password?")
                         .bold()
                         .padding(.leading, 180)
-            }
+                }
             }
             
             // Mark: Sign In button
@@ -49,15 +43,15 @@ struct UserLoginView: View {
                     .cornerRadius(25)
             }
             // Mark: Navigate to SignUp
-                NavigationLink {
-                    RegistrationView()
-                } label: {
-                    HStack(spacing: 3) {
-                        Text("Don't have account?")
-                        Text("Sign Up")
-                            .bold()
+            NavigationLink {
+                RegistrationView()
+            } label: {
+                HStack(spacing: 3) {
+                    Text("Don't have account?")
+                    Text("Sign Up")
+                        .bold()
                 }
-                }
+            }
             .padding()
         }
     }

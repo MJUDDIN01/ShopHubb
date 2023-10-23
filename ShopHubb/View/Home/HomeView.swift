@@ -1,15 +1,8 @@
-//
-//  HomeView.swift
-//  ShopHubb
-//
-//  Created by Jasim Uddin on 19/10/2023.
-//
 
 import SwiftUI
 
 struct HomeView: View {
     @State private var selectedTab = 0
-
     var body: some View {
         TabView(selection: $selectedTab) {
             HomeTabView()
@@ -33,10 +26,10 @@ struct HomeView: View {
                 }
                 .tag(2)
             
-            ProfileView()
+            BasketView()
                 .tabItem {
-                    Image(systemName: "person.crop.circle")
-                    Text("Profile")
+                    Image(systemName: "cart")
+                    Text("Basket")
                 }
                 .tag(3)
         }

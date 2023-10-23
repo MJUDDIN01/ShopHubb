@@ -21,6 +21,7 @@
 		9F057DD72AE188FC00DB0805 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DD62AE188FC00DB0805 /* ProfileView.swift */; };
 		9F057DD92AE1891100DB0805 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DD82AE1891100DB0805 /* FavoriteView.swift */; };
 		9F057DDB2AE1891E00DB0805 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DDA2AE1891E00DB0805 /* SearchView.swift */; };
+		9F057DDD2AE2E00600DB0805 /* OnBoardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F057DDC2AE2E00600DB0805 /* OnBoardingPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		9F057DD62AE188FC00DB0805 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		9F057DD82AE1891100DB0805 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		9F057DDA2AE1891E00DB0805 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		9F057DDC2AE2E00600DB0805 /* OnBoardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				9F057DB12AE1422600DB0805 /* OnBoardingView.swift */,
+				9F057DDC2AE2E00600DB0805 /* OnBoardingPageView.swift */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				9F057DCD2AE160BF00DB0805 /* ResetPasswordView.swift in Sources */,
 				9F057DD52AE188EA00DB0805 /* HometabView.swift in Sources */,
 				9F057DCF2AE1617800DB0805 /* InputView.swift in Sources */,
+				9F057DDD2AE2E00600DB0805 /* OnBoardingPageView.swift in Sources */,
 				9F057DB02AE1422600DB0805 /* ShopHubbApp.swift in Sources */,
 				9F057DCB2AE160AD00DB0805 /* RegistrationView.swift in Sources */,
 			);

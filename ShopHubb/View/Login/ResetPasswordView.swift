@@ -5,7 +5,7 @@ struct ResetPasswordView: View {
     @State private var confirmPassword = ""
     @Environment(\.dismiss) var dismiss
     var body: some View {
-        // Form field
+        // Mark: Form field
         VStack(spacing: 15) {
             InputView(text: $newPassword,
                       title: "Password",
@@ -18,7 +18,7 @@ struct ResetPasswordView: View {
         }
         .padding()
         Button {
-            // Add logic for password reset
+            // Mark: Add logic for password reset
             dismiss()
         } label: {
             Text("Reset Password")
