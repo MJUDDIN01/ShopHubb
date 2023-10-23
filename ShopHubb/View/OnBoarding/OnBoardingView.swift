@@ -11,7 +11,7 @@ struct OnBoardingView: View {
     let timer = Timer.publish(every: 3.0, on: .main, in: .common).autoconnect()
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 HStack {
                     Spacer()

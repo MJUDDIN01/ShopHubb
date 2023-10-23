@@ -33,7 +33,7 @@ struct UserLoginView: View {
             
             // Mark: Sign In button
             NavigationLink {
-                LoggedInView()
+                HomeView()
             } label: {
                 Text("Sign In")
                     .padding()
