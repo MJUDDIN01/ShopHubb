@@ -2,6 +2,8 @@
 * Creating an e-commerce app using SwiftUI and MVVM architecture
 * Added the OnboardingView
 * Added the LoginView
+* Added the Homeview with TabBarViews
+* TabBar have Home, Favorite, Search, Cart
 
 # Tech Stack
 * Used the SwiftUI framework
