@@ -24,7 +24,7 @@ struct OnBoardingView: View {
                     ForEach(0..<onBoardingPages.count, id:\.self) { page in
                         OnboardingPageView(page: onBoardingPages[page])
                             .tag(page)
-                            .padding(.bottom, 25)
+                            .padding(.bottom, 30)
                     }
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
