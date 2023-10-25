@@ -31,8 +31,11 @@ struct HomeTabView: View {
                     noMatchingSearchItemFound = false
                     viewModel.refreshProduct()
                 } else {
-                    searchResult = viewModel.products.filter {
-                        $0.brand.localizedCaseInsensitiveContains(searchText)
+                    searchResult = viewModel.products.filter { product in
+                        let titleMatch = product.title.localizedCaseInsensitiveContains(searchText)
+                        let brandMatch = product.title.localizedCaseInsensitiveContains(searchText)
+                        let categoryMatch = product.category.localizedCaseInsensitiveContains(searchText)
+                        return titleMatch || brandMatch || categoryMatch
                     }
                     noMatchingSearchItemFound = searchResult.isEmpty
                     
