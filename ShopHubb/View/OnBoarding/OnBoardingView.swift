@@ -15,7 +15,7 @@ struct OnBoardingView: View {
             VStack {
                 HStack {
                     Spacer()
-                    NavigationLink(destination: HomeView()) {
+                    NavigationLink(destination: TabViewNavigation()) {
                         Text("Skip Login")
                             .padding()
                     }

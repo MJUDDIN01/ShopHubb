@@ -32,9 +32,7 @@ struct UserLoginView: View {
             }
             
             // Mark: Sign In button
-            NavigationLink {
-                HomeView()
-            } label: {
+            NavigationLink(destination: TabViewNavigation()) {
                 Text("Sign In")
                     .padding()
                     .foregroundColor(Color.white)

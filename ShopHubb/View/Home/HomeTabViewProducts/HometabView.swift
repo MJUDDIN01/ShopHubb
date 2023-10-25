@@ -1,6 +1,7 @@
+
 import SwiftUI
 
-struct SearchView: View {
+struct HomeTabView: View {
     @State private var selectedTab = 0
     @StateObject private var viewModel: HomeTabViewProductsViewModel
     @State private var searchResult: [Products] = []
@@ -13,14 +14,14 @@ struct SearchView: View {
     var body: some View {
         ZStack {
             List(searchResult.isEmpty ? viewModel.products : searchResult, id: \.id) { product in
-                Text("You might want \(product.brand)")
-                    .searchCompletion(product.brand)
+                NavigationLink(destination: ProductDetails(product: product)) {
+                    HomeTabViewRow(product: product)
+                }
             }
             .searchable(text: $viewModel.searchText) {
                 ForEach(viewModel.products, id: \.id) { product in
-                    NavigationLink(destination: ProductDetails(product: product)) {
-                        HomeTabViewRow(product: product)
-                    }
+                    Text("You might want \(product.brand)")
+                        .searchCompletion(product.brand)
                 }
             }
             .onChange(of: viewModel.searchText) { searchText in
@@ -52,5 +53,3 @@ struct SearchView: View {
         }
     }
 }
-
-
