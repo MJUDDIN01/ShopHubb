@@ -1,9 +1,3 @@
-//
-//  OnboardingItem.swift
-//  ShopHubb
-//
-//  Created by Jasim Uddin on 23/10/2023.
-//
 
 import SwiftUI
 
