@@ -3,9 +3,9 @@ import SwiftUI
 
 struct HomeTabView: View {
     @State private var selectedTab = 0
-    @StateObject private var viewModel: HomeTabViewProductsViewModel
     @State private var searchResult: [Products] = []
     @State private var noMatchingSearchItemFound: Bool = false
+    @StateObject private var viewModel: HomeTabViewProductsViewModel
     init() {
         let networkingManager = NetworkingManager.shared
         self._viewModel = StateObject(wrappedValue: HomeTabViewProductsViewModel(productFetcher: networkingManager))
@@ -33,7 +33,7 @@ struct HomeTabView: View {
                 } else {
                     searchResult = viewModel.products.filter { product in
                         let titleMatch = product.title.localizedCaseInsensitiveContains(searchText)
-                        let brandMatch = product.title.localizedCaseInsensitiveContains(searchText)
+                        let brandMatch = product.brand.localizedCaseInsensitiveContains(searchText)
                         let categoryMatch = product.category.localizedCaseInsensitiveContains(searchText)
                         return titleMatch || brandMatch || categoryMatch
                     }
