@@ -15,15 +15,7 @@ struct SearchView: View {
             ScrollView {
                 NavigationView {
                     ZStack {
-                        List(searchResult.isEmpty ? viewModel.products : viewModel.filteredProducts, id: \.id) { product in
-                            Text("You might want \(product.brand)")
-                                .searchCompletion(product.brand)
-                        }
-                        .onAppear { viewModel.refreshProduct() }
-                        .refreshable {
-                            viewModel.pullToRefresh()
-                        }
-                        if viewModel.isLoading { HomeTabViewLoading() }
+                        ProductsSearchView(searchResult: $searchResult, viewModel: viewModel)
                     }
                     .padding(.top, 3)
                     .alert(item: $viewModel.alertData) { alertItem in

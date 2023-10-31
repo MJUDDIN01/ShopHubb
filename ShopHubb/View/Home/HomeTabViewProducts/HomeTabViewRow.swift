@@ -2,7 +2,14 @@
 import SwiftUI
 
 struct HomeTabViewRow: View {
-    let product: Products
+    var product: Products
+    @StateObject private var favoriteViewModel: FavoriteViewmodel
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    init(product: Products) {
+            self.product = product
+            self._favoriteViewModel = StateObject(wrappedValue: FavoriteViewmodel(products: [product]))
+        }
     
     var body: some View {
         HStack {
@@ -13,15 +20,15 @@ struct HomeTabViewRow: View {
                     .scaledToFit()
                     .aspectRatio(contentMode: .fill)
                     .clipShape(Circle())
-                    .frame(width: 40, height: 40)
+                    .frame(width: 60, height: 60)
                     .foregroundColor(Color.orange)
             } placeholder: {
                 Circle()
-                    .frame(width: 32, height: 32)
+                    .frame(width: 48, height: 48)
                     .background(Color(.systemGray5))
             }
             // Mark:- Product info
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: 8) {
                 Text(product.title)
                     .font(.subheadline)
                     .fontWeight(.semibold)
@@ -34,20 +41,41 @@ struct HomeTabViewRow: View {
             
             Spacer()
             // Mark:- Product price info
-            VStack(alignment: .trailing, spacing: 4) {
-                Text("\(product.price.toCurrency())")
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .padding(.leading, 4)
-                Text("\(product.discountPercentage.toPercentString())")
-                    .font(.caption)
-                    .padding(.leading, 6)
-                    .foregroundColor(product.discountPercentage > 0 ? .red : .green)
+            VStack {
+                VStack(alignment: .trailing, spacing: 4) {
+                    Text("\(product.price.toCurrency())")
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .padding(.leading, 4)
+                    Text("\(product.discountPercentage.toPercentString())")
+                        .font(.caption)
+                        .padding(.leading, 6)
+                        .foregroundColor(product.discountPercentage > 0 ? .red : .green)
+                }
+                .padding(.leading, 2)
+                Spacer()
+                // Mark: Buy button and favorite button
+                HStack {
+                    BuyButton {
+                        // add action
+                    }
+                    FavoriteButton(isFavorite: favoriteViewModel.isFavorite(product.id)) {
+                        withAnimation {
+                            favoriteViewModel.toggleFavorite(product.id)
+                            do {
+                                try viewContext.save()
+                            } catch {
+                                let nsError = error as NSError
+                                fatalError("Unresolved error \(nsError)")
+                            }
+                        }
+                    }
             }
-            .padding(.leading, 2)
+            }
+            
         }
         .padding(.horizontal)
-        .padding(.vertical, 4)
+        .padding(.vertical, 8)
     }
 }
 
