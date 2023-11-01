@@ -41,6 +41,7 @@
 		9FCC8F372AF1552900808150 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC8F362AF1552900808150 /* FavoriteButton.swift */; };
 		9FCC8F3A2AF1599D00808150 /* FavoriteViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC8F392AF1599D00808150 /* FavoriteViewmodel.swift */; };
 		9FCC8F412AF2632D00808150 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC8F402AF2632D00808150 /* StarRatingView.swift */; };
+		9FCC8F432AF2836500808150 /* ImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC8F422AF2836500808150 /* ImageCarouselView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		9FCC8F362AF1552900808150 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		9FCC8F392AF1599D00808150 /* FavoriteViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewmodel.swift; sourceTree = "<group>"; };
 		9FCC8F402AF2632D00808150 /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
+		9FCC8F422AF2836500808150 /* ImageCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarouselView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,6 +347,7 @@
 			children = (
 				9F67E7E52AE90FC700CD4AEF /* ProductDetails.swift */,
 				9FCC8F402AF2632D00808150 /* StarRatingView.swift */,
+				9FCC8F422AF2836500808150 /* ImageCarouselView.swift */,
 			);
 			path = DetailsView;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				9F057DD32AE1816E00DB0805 /* LoggedInView.swift in Sources */,
 				9F67E7CF2AE90B1D00CD4AEF /* ProductsFetching.swift in Sources */,
 				9F057DD72AE188FC00DB0805 /* BasketView.swift in Sources */,
+				9FCC8F432AF2836500808150 /* ImageCarouselView.swift in Sources */,
 				9F67E7D62AE90C2900CD4AEF /* ServiceErrorAlert.swift in Sources */,
 				9F057DDB2AE1891E00DB0805 /* SearchView.swift in Sources */,
 				9F67E7E92AE9102B00CD4AEF /* Double.swift in Sources */,

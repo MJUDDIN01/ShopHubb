@@ -19,4 +19,7 @@ struct Products: Identifiable, Codable {
     var thumbNailUrl: URL? {
         return URL(string: thumbnail)
     }
+    var imagesUrl: [URL] {
+        return images.compactMap { URL(string: $0) }
+    }
 }

@@ -5,15 +5,11 @@ struct ProductDetails: View {
     let product: Products
     var body: some View {
         HStack {
-            HStack {
+            VStack {
                 // Mark:- Load image in full
-                AsyncImage(url: product.thumbNailUrl) { image in
-                    image
-                        .resizable()
-                        .scaledToFit()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: UIScreen.main.bounds.width-30, height: 140)
-                        .foregroundColor(Color.orange)
+                ImageCarouselView(imageURLs: product.imagesUrl)
+//                    .frame(height: 200)
+                Spacer()
                     HStack {
                         Text("Price:").bold()
                         Text("\(Int(discountedPrice()).toCurrency())")
@@ -24,14 +20,9 @@ struct ProductDetails: View {
                             .foregroundColor(Color.gray)
                       
                     }
-                } placeholder: {
-                    Text("Thumbnail")
-                        .frame(width: 32, height: 32)
-                        .background(Color(.systemGray5))
                 }
             }
-            .padding()
-        }
+        
         VStack(alignment: .leading) {
             HStack {
                 Text("Category:")
