@@ -24,17 +24,19 @@ struct ProductDetails: View {
             Spacer()
             HStack {
                 VStack(alignment: .leading) {
+                    Divider()
                     HStack {
                         Text("Description")
                             .bold()
-                        Image(systemName: isDescriptionExpanded ? "arrow.up.circle" : "arrow.down.circle")
+                        Spacer()
+                        Image(systemName: isDescriptionExpanded ? "chevron.up" : "chevron.down")
+                            .foregroundColor(Color.gray)
                             .onTapGesture {
                                 withAnimation {
                                     isDescriptionExpanded.toggle()
                                 }
                             }
                     }
-                    .foregroundColor(Color.blue)
                     if isDescriptionExpanded {
                         HStack {
                             Text("Category:")
@@ -47,7 +49,7 @@ struct ProductDetails: View {
                         
                     }
                     
-                    
+                    Divider()
                 }
             }
             .padding(2)
