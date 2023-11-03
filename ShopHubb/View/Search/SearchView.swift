@@ -33,11 +33,7 @@ struct SearchView: View {
                 }
                 .frame(minHeight: geometryReader.size.height)
             }
-           
-           
         }
-        
-        
     }
 }
 

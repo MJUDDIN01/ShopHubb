@@ -1,9 +1,3 @@
-//
-//  HomeTabViewProductsViewModel.swift
-//  ShopHubb
-//
-//  Created by Jasim Uddin on 25/10/2023.
-//
 
 import Foundation
 import Combine
@@ -15,7 +9,7 @@ class HomeTabViewProductsViewModel: ObservableObject {
     @Published var alertData: AlertData?
     @Published var searchText = ""
     @Published var debouncedText = ""
-
+    
     private var subscription = Set<AnyCancellable>()
     
     private let productFetcher: ProductFetching

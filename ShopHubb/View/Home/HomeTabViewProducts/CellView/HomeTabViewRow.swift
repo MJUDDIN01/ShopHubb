@@ -7,9 +7,9 @@ struct HomeTabViewRow: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     init(product: Products) {
-            self.product = product
-            self._favoriteViewModel = StateObject(wrappedValue: FavoriteViewmodel(products: [product]))
-        }
+        self.product = product
+        self._favoriteViewModel = StateObject(wrappedValue: FavoriteViewmodel(products: [product]))
+    }
     
     var body: some View {
         HStack {
@@ -70,7 +70,7 @@ struct HomeTabViewRow: View {
                             }
                         }
                     }
-            }
+                }
             }
             
         }

@@ -11,10 +11,8 @@ extension Double {
         return formatter
     }
     
-   
     func toPercentString() -> String {
         guard let numberAsString = numberFormatter.string(for: self) else { return "" }
         return numberAsString + "%"
     }
-    
 }

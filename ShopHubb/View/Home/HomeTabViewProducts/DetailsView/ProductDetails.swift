@@ -46,9 +46,7 @@ struct ProductDetails: View {
                         .padding(2)
                         Text(product.description)
                             .multilineTextAlignment(.leading)
-                        
                     }
-                    
                     Divider()
                 }
             }
