@@ -61,7 +61,7 @@ struct ProductDetails: View {
                 .padding(2)
                 .navigationBarTitle(product.title, displayMode: .inline)
         }
-        .padding()
+        .padding(5)
     }
     private func discountedPrice() -> Double {
         return Double(product.price - Int(product.discountPercentage))

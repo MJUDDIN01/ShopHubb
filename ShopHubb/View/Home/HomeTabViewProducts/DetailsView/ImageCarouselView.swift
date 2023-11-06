@@ -3,7 +3,7 @@ import SwiftUI
 
 struct ImageCarouselView: View {
     @State private var currentindext = 0
-    let imageWidth = UIScreen.main.bounds.width - 80
+    let imageWidth = UIScreen.main.bounds.width - 10
     let imageURLs: [URL]
     let timer = Timer.publish(every: 3.0, on: .main, in: .default).autoconnect()
     
@@ -17,16 +17,17 @@ struct ImageCarouselView: View {
                             .resizable()
                             .scaledToFit()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: imageWidth, height: 200)
+                            .frame(width: imageWidth, height: 180)
                     } placeholder: {
                         Text(" ")
                     }
                     .tag(index)
-                    .padding(.bottom, 40)
                 }
             }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+            .padding(.leading, 10)
+            .padding(.bottom, 40)
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .never))
             .animation(.easeInOut, value: currentindext)
             .onReceive(timer) { _ in
                 withAnimation {
@@ -48,10 +49,12 @@ struct ImageCarouselView: View {
                     }
                     .padding(.trailing, 5)
                 }
+                .padding(.top, 25)
             }
             
         }
-        
+        .background(Color.white)
+        .border(Color(uiColor: .systemGray4))
         
         
     }
