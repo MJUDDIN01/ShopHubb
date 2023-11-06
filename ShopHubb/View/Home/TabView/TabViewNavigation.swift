@@ -3,6 +3,7 @@ import SwiftUI
 
 struct TabViewNavigation: View {
     @State private var selectedTab = 0
+    @State private var cartItemCount = 0
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -38,7 +39,7 @@ struct TabViewNavigation: View {
             
             // Basket Tab
             NavigationView {
-                BasketView()
+                BasketView(cartItemCount: $cartItemCount)
             }
             .tabItem {
                 Image(systemName: "cart")
