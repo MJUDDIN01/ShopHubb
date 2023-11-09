@@ -1,16 +1,8 @@
 
-import SwiftUI
-
-struct FavoriteButton: View {
-    var isFavorite: Bool
-    var action: () -> Void
-    var body: some View {
-        Button(action: action) {
-            Image(systemName: isFavorite ? "heart.fill" : "heart")
-                .foregroundColor(isFavorite ? .red : .gray)
-                .padding(8)
-                .background(Color.white)
-                .cornerRadius(5)
-        }
-    }
-}
+//import SwiftUI
+//
+//struct FavoriteButton: View {
+//
+//    var body: some View {
+//    }
+//}

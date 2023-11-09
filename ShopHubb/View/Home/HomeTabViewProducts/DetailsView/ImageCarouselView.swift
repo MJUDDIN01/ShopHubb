@@ -1,9 +1,10 @@
-
 import SwiftUI
 
 struct ImageCarouselView: View {
+    let product: Products
     @State private var currentindext = 0
     @State private var isFavorite = false
+    @EnvironmentObject var coreDataFavoriteViewModel: CoreDataFavoriteViewModel
     let imageWidth = UIScreen.main.bounds.width - 10
     let imageURLs: [URL]
     let timer = Timer.publish(every: 3.0, on: .main, in: .default).autoconnect()
@@ -57,9 +58,17 @@ struct ImageCarouselView: View {
                     // Toggle favorite state
                     isFavorite.toggle()
                     // Update Core Data or your favorite data model here
+                    if coreDataFavoriteViewModel.isProductInFavorites(product) {
+                        coreDataFavoriteViewModel.removeProductFromFavorites(product)
+                    } else {
+                        coreDataFavoriteViewModel.addProducts(title: product.title, brand: product.brand)
+                    }
                 }) {
                     Image(systemName: isFavorite ? "heart.fill" : "heart")
                         .foregroundColor(isFavorite ? .red : .gray)
+                        .padding(8)
+                        .background(Color.white)
+                        .cornerRadius(5)
                 }
                 .font(.title)
             }

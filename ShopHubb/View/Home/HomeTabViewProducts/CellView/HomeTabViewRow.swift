@@ -3,13 +3,6 @@ import SwiftUI
 
 struct HomeTabViewRow: View {
     var product: Products
-    @StateObject private var favoriteViewModel: FavoriteViewmodel
-    @Environment(\.managedObjectContext) private var viewContext
-    
-    init(product: Products) {
-        self.product = product
-        self._favoriteViewModel = StateObject(wrappedValue: FavoriteViewmodel(products: [product]))
-    }
     
     var body: some View {
         HStack {
@@ -53,26 +46,7 @@ struct HomeTabViewRow: View {
                         .foregroundColor(product.discountPercentage > 0 ? .red : .green)
                 }
                 .padding(.leading, 2)
-                Spacer()
-                // Mark: Buy button and favorite button
-                HStack {
-                    BuyButton {
-                        // add action
-                    }
-                    FavoriteButton(isFavorite: favoriteViewModel.isFavorite(product.id)) {
-                        withAnimation {
-                            favoriteViewModel.toggleFavorite(product.id)
-                            do {
-                                try viewContext.save()
-                            } catch {
-                                let nsError = error as NSError
-                                fatalError("Unresolved error \(nsError)")
-                            }
-                        }
-                    }
-                }
             }
-            
         }
         .padding(.horizontal)
         .padding(.vertical, 8)

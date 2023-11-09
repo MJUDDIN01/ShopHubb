@@ -12,7 +12,7 @@ struct ProductDetails: View {
             VStack(alignment: .leading) {
                 HStack {
                     // Mark:- Load image in full
-                    ImageCarouselView(imageURLs: product.imagesUrl)
+                    ImageCarouselView(product: product, imageURLs: product.imagesUrl)
                 }
                 Spacer()
                 HStack {
@@ -93,10 +93,10 @@ struct ProductDetails: View {
                 cartItemCount += 1
                 isCartBlue = true
             }) {
-                Text("Buy")
+                Text("Add To Cart")
                     .font(.title)
                     .padding()
-                    .background(isCartBlue ? Color.gray : Color.blue)
+                    .background(isCartBlue ? Color.blue : Color.brown)
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
