@@ -61,7 +61,7 @@ struct ImageCarouselView: View {
                     if coreDataFavoriteViewModel.isProductInFavorites(product) {
                         coreDataFavoriteViewModel.removeProductFromFavorites(product)
                     } else {
-                        coreDataFavoriteViewModel.addProducts(title: product.title, brand: product.brand)
+                        coreDataFavoriteViewModel.addProducts(title: product.title, brand: product.brand, thumbnail: product.thumbnail, descriptions: product.description)
                     }
                 }) {
                     Image(systemName: isFavorite ? "heart.fill" : "heart")
@@ -71,6 +71,10 @@ struct ImageCarouselView: View {
                         .cornerRadius(5)
                 }
                 .font(.title)
+            }
+            .onAppear {
+                // keep the heart color to red if its in favorite
+                isFavorite = coreDataFavoriteViewModel.isProductInFavorites(product)
             }
             .padding(10)
         }

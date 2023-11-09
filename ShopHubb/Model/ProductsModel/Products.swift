@@ -6,7 +6,7 @@ struct ProductResponse: Codable {
     let total: Int
 }
 
-struct Products: Identifiable, Codable {
+struct Products: Identifiable, Codable, Equatable, Hashable {
     let id: Int
     let title, description: String
     let price: Int

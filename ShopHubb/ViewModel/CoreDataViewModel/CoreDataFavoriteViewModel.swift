@@ -38,20 +38,33 @@ class CoreDataFavoriteViewModel: ObservableObject {
     }
     
     func isProductInFavorites(_ product: Products) -> Bool {
-        return favoriteEntityProducts.contains { $0.title == product.title && $0.brand == product.brand }
+        return favoriteEntityProducts.contains {
+            $0.title == product.title &&
+            $0.brand == product.brand &&
+            $0.thumbnail == product.thumbnail &&
+            $0.descriptions == product.description
+        }
     }
     
-    func addProducts(title: String, brand: String) {
+    func addProducts(title: String, brand: String, thumbnail: String, descriptions: String) {
         let favoriteEntity = FavoriteEntityProducts(context: context.viewContext)
         favoriteEntity.title = title
         favoriteEntity.brand = brand
+        favoriteEntity.thumbnail = thumbnail
+        favoriteEntity.descriptions = descriptions
         self.saveProducts()
     }
     
     func removeProductFromFavorites(_ product: Products) {
-        if let index = favoriteEntityProducts.firstIndex(where: { $0.title == product.title && $0.brand == product.brand }) {
+        if let index = favoriteEntityProducts.firstIndex(where: { $0.title == product.title && $0.brand == product.brand && $0.thumbnail == product.thumbnail && $0.descriptions == product.description }) {
             context.viewContext.delete(favoriteEntityProducts[index])
             self.saveProducts()
         }
+    }
+    
+    func removeDuplicates() {
+        let uniqueProducts = Array(Set(favoriteEntityProducts))
+        favoriteEntityProducts = uniqueProducts
+        saveProducts()
     }
 }
