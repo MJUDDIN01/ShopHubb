@@ -4,7 +4,8 @@
 * Added the LoginView
 * Added the Homeview with TabBarViews
 * TabBar have Home, Favorite, Search, Cart
-* Searching can matched with title/brand/category 
+* Searching can matched with title/brand/category
+* Added ThemeColor to be specific with defined color only
 
 # Tech Stack
 * Used the SwiftUI framework
