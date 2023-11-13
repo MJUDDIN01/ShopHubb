@@ -14,7 +14,7 @@ struct HomeTabViewRow: View {
                     .aspectRatio(contentMode: .fill)
                     .clipShape(Circle())
                     .frame(width: 60, height: 60)
-                    .foregroundColor(Color.orange)
+                    .foregroundColor(Color.theme.accent)
             } placeholder: {
                 Circle()
                     .frame(width: 48, height: 48)
@@ -43,7 +43,7 @@ struct HomeTabViewRow: View {
                     Text("\(product.discountPercentage.toPercentString())")
                         .font(.caption)
                         .padding(.leading, 6)
-                        .foregroundColor(product.discountPercentage > 0 ? .red : .green)
+                        .foregroundColor(product.discountPercentage > 0 ? Color.theme.red : Color.theme.green)
                 }
                 .padding(.leading, 2)
             }

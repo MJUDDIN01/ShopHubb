@@ -23,7 +23,7 @@ struct ProductDetails: View {
                         .foregroundColor(Color.red)
                     Text("\(product.price.toCurrency())")
                         .strikethrough()
-                        .foregroundColor(Color.gray)
+                        .foregroundColor(Color.theme.gray)
                 }
                 Spacer()
                 HStack {
@@ -34,7 +34,7 @@ struct ProductDetails: View {
                                 .bold()
                             Spacer()
                             Image(systemName: isDescriptionExpanded ? "chevron.up" : "chevron.down")
-                                .foregroundColor(Color.gray)
+                                .foregroundColor(Color.theme.gray)
                                 .onTapGesture {
                                     withAnimation {
                                         isDescriptionExpanded.toggle()
@@ -58,7 +58,7 @@ struct ProductDetails: View {
                 HStack {
                     Text("Hurry up Only")
                     Text("\(product.stock) \(product.title)")
-                        .foregroundColor(Color.red)
+                        .foregroundColor(Color.theme.red)
                     Text("stocks left!!!")
                 }
                 Spacer()
@@ -78,13 +78,13 @@ struct ProductDetails: View {
                             .overlay(
                                 Text("\(cartItemCount)")
                                     .font(.system(size: 14, weight: .bold))
-                                    .foregroundColor(.red)
+                                    .foregroundColor(Color.theme.red)
                                     .offset(x: 8, y: -12) // Adjust the position as needed
                             )
                     }
                     
                 }
-                .foregroundColor(.primary)
+                .foregroundColor(Color.theme.accent)
             }
         }
         HStack {
@@ -96,7 +96,7 @@ struct ProductDetails: View {
                 Text("Add To Cart")
                     .font(.title)
                     .padding()
-                    .background(isCartBlue ? Color.blue : Color.brown)
+                    .background(isCartBlue ? Color.theme.green : Color.theme.brown)
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }

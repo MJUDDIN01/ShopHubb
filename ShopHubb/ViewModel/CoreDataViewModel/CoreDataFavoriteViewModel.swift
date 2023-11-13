@@ -42,21 +42,33 @@ class CoreDataFavoriteViewModel: ObservableObject {
             $0.title == product.title &&
             $0.brand == product.brand &&
             $0.thumbnail == product.thumbnail &&
-            $0.descriptions == product.description
+            $0.descriptions == product.description &&
+            $0.price == product.price &&
+            $0.discountPercentage == product.discountPercentage
         }
     }
     
-    func addProducts(title: String, brand: String, thumbnail: String, descriptions: String) {
+    func addProducts(title: String, brand: String, thumbnail: String, descriptions: String, price: Int16, discountPercentage: Double) {
         let favoriteEntity = FavoriteEntityProducts(context: context.viewContext)
         favoriteEntity.title = title
         favoriteEntity.brand = brand
         favoriteEntity.thumbnail = thumbnail
         favoriteEntity.descriptions = descriptions
+        favoriteEntity.price = price
+        favoriteEntity.discountPercentage = discountPercentage
         self.saveProducts()
     }
     
     func removeProductFromFavorites(_ product: Products) {
-        if let index = favoriteEntityProducts.firstIndex(where: { $0.title == product.title && $0.brand == product.brand && $0.thumbnail == product.thumbnail && $0.descriptions == product.description }) {
+        if let index = favoriteEntityProducts.firstIndex(where: {
+            $0.title == product.title &&
+            $0.brand == product.brand &&
+            $0.thumbnail == product.thumbnail &&
+            $0.descriptions == product.description &&
+            $0.price == product.price &&
+            $0.discountPercentage == product.discountPercentage
+            
+        }) {
             context.viewContext.delete(favoriteEntityProducts[index])
             self.saveProducts()
         }

@@ -7,7 +7,7 @@ struct HomeTabViewLoading: View {
             Color(.systemBackground).edgesIgnoringSafeArea(.all)
             
             ProgressView()
-                .progressViewStyle(CircularProgressViewStyle(tint: .gray))
+                .progressViewStyle(CircularProgressViewStyle(tint: Color.theme.gray))
                 .scaleEffect(2)
         }
     }

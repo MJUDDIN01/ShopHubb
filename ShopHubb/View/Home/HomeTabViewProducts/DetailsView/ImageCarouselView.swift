@@ -61,11 +61,18 @@ struct ImageCarouselView: View {
                     if coreDataFavoriteViewModel.isProductInFavorites(product) {
                         coreDataFavoriteViewModel.removeProductFromFavorites(product)
                     } else {
-                        coreDataFavoriteViewModel.addProducts(title: product.title, brand: product.brand, thumbnail: product.thumbnail, descriptions: product.description)
+                        coreDataFavoriteViewModel.addProducts(
+                            title: product.title,
+                            brand: product.brand,
+                            thumbnail: product.thumbnail,
+                            descriptions: product.description,
+                            price: Int16(product.price),
+                            discountPercentage: product.discountPercentage
+                        )
                     }
                 }) {
                     Image(systemName: isFavorite ? "heart.fill" : "heart")
-                        .foregroundColor(isFavorite ? .red : .gray)
+                        .foregroundColor(isFavorite ? Color.theme.red : Color.theme.gray)
                         .padding(8)
                         .background(Color.white)
                         .cornerRadius(5)
@@ -78,7 +85,7 @@ struct ImageCarouselView: View {
             }
             .padding(10)
         }
-        .background(Color.white)
-        .border(Color(uiColor: .systemGray4))
+        .background(Color.theme.background)
+        .border(Color.theme.gray)
     }
 }
